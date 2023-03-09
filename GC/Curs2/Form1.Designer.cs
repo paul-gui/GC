@@ -52,18 +52,21 @@
             this.ex1ToolStripMenuItem.Name = "ex1ToolStripMenuItem";
             this.ex1ToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.ex1ToolStripMenuItem.Text = "Ex1";
+            this.ex1ToolStripMenuItem.Click += new System.EventHandler(this.ex1ToolStripMenuItem_Click);
             // 
             // ex2ToolStripMenuItem
             // 
             this.ex2ToolStripMenuItem.Name = "ex2ToolStripMenuItem";
             this.ex2ToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.ex2ToolStripMenuItem.Text = "Ex2";
+            this.ex2ToolStripMenuItem.Click += new System.EventHandler(this.ex2ToolStripMenuItem_Click);
             // 
             // ex3ToolStripMenuItem
             // 
             this.ex3ToolStripMenuItem.Name = "ex3ToolStripMenuItem";
             this.ex3ToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.ex3ToolStripMenuItem.Text = "Ex3";
+            this.ex3ToolStripMenuItem.Click += new System.EventHandler(this.ex3ToolStripMenuItem_Click);
             // 
             // Form1
             // 

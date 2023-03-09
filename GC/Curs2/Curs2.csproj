@@ -33,6 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CustomDrawMethods, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLS\CustomDrawMethods\CustomDrawMethods.dll</HintPath>
+    </Reference>
+    <Reference Include="SmallestEnclosingCircle">
+      <HintPath>..\SmallestEnclosingCircle\bin\Debug\SmallestEnclosingCircle.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,6 +65,12 @@
     <Compile Include="Ex2Form.Designer.cs">
       <DependentUpon>Ex2Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ex3Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex3Form.Designer.cs">
+      <DependentUpon>Ex3Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +81,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Ex1Form.resx">
       <DependentUpon>Ex1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ex2Form.resx">
+      <DependentUpon>Ex2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ex3Form.resx">
+      <DependentUpon>Ex3Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

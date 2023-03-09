@@ -20,7 +20,7 @@ namespace Curs1
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Ex1(e.Graphics);
+            Ex3(e.Graphics);
         }
 
         private void Ex1(Graphics g)

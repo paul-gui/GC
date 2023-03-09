@@ -1,6 +1,6 @@
 ﻿namespace Curs2
 {
-    partial class Ex2Form
+    partial class Ex3Form
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Ex2Form
+            // Ex3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Ex2Form";
-            this.Text = "Ex2Form";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Ex2Form_Paint);
+            this.Name = "Ex3Form";
+            this.Text = "Ex3Form";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Ex3Form_Paint);
             this.ResumeLayout(false);
 
         }
