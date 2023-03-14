@@ -27,7 +27,6 @@ namespace Curs2
         private void Operations(Graphics g)
         {
             Random rnd = new Random();
-            CustomGraphics customGraphics = new CustomGraphics(g);
 
             Pen pointPen = new Pen(Color.Black, 2);
             Pen trianglePen = new Pen(Color.Blue, 1);
@@ -41,7 +40,7 @@ namespace Curs2
                 x = rnd.Next(10, this.ClientSize.Width - 10);
                 y = rnd.Next(10, this.ClientSize.Height - 10);
                 points[i] = new Point(x, y);
-                customGraphics.DrawPoint(pointPen, x, y);
+                CustomGraphics.DrawPoint(g, pointPen, x, y);
             }
 
             bool sorted;
@@ -73,7 +72,7 @@ namespace Curs2
                     c = points[i + 2];
                 }
             }
-            customGraphics.DrawTriangle(trianglePen, a, b, c);
+            CustomGraphics.DrawTriangle(g, trianglePen, a, b, c);
 
         }
 

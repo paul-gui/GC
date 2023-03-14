@@ -167,7 +167,6 @@ namespace Curs2
         private void Operations(Graphics g)
         {
             Random rnd = new Random();
-            CustomGraphics customGraphics = new CustomGraphics(g);
 
             Pen pointPen = new Pen(Color.Black, 2);
             Pen trianglePen = new Pen(Color.Green, 1);
@@ -181,7 +180,7 @@ namespace Curs2
                 x = rnd.Next(150, this.ClientSize.Width - 150);
                 y = rnd.Next(100, this.ClientSize.Height - 100);
                 points.Add(new SmallestEnclosingCircle.Point(x, y));
-                customGraphics.DrawPoint(pointPen, x, y);
+                CustomGraphics.DrawPoint(g, pointPen, x, y);
             }
 
             Circle result = SmallestEnclosingCircleMethods.MakeCircle(points);

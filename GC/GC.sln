@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDrawMethods", "Custom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallestEnclosingCircle", "SmallestEnclosingCircle\SmallestEnclosingCircle.csproj", "{D4A35622-F840-4822-B8BF-E03E8B362C12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curs3", "Curs3\Curs3.csproj", "{2D6D69BD-7E1C-428E-8E8F-B99E528AA7DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1", "Lab1_P1\Lab1.csproj", "{EB3299A6-4DAD-4201-86F4-497500804073}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{D4A35622-F840-4822-B8BF-E03E8B362C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4A35622-F840-4822-B8BF-E03E8B362C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4A35622-F840-4822-B8BF-E03E8B362C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D6D69BD-7E1C-428E-8E8F-B99E528AA7DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D6D69BD-7E1C-428E-8E8F-B99E528AA7DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D6D69BD-7E1C-428E-8E8F-B99E528AA7DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D6D69BD-7E1C-428E-8E8F-B99E528AA7DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB3299A6-4DAD-4201-86F4-497500804073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB3299A6-4DAD-4201-86F4-497500804073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB3299A6-4DAD-4201-86F4-497500804073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB3299A6-4DAD-4201-86F4-497500804073}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -29,7 +29,6 @@ namespace Curs2
         private void Operations(Graphics g)
         {
             Random rnd = new Random();
-            CustomGraphics customGraphics = new CustomGraphics(g);
 
             Pen linePen = new Pen(Color.Red, 1);
             Pen pointPen = new Pen(Color.Black, 2);
@@ -44,13 +43,13 @@ namespace Curs2
                 x = rnd.Next(10, this.ClientSize.Width - 10);
                 y = rnd.Next(10, this.ClientSize.Height - 10);
                 points[i] = new Point(x, y);
-                customGraphics.DrawPoint(pointPen, x, y);
+                CustomGraphics.DrawPoint(g, pointPen, x, y);
             }
 
             x = rnd.Next(10, this.ClientSize.Width - 10);
             y = rnd.Next(10, this.ClientSize.Height - 10);
             Point q = new Point(x, y);
-            customGraphics.DrawPoint(pointPen, q);
+            CustomGraphics.DrawPoint(g, pointPen, q);
 
             for (int i = 0; i < n - 1; i++)
             {
