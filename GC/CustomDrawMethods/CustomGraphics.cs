@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CustomDrawMethods
+namespace CustomCGMethods
 {
     public static class CustomGraphics
     {
@@ -44,14 +44,6 @@ namespace CustomDrawMethods
                 DrawPoint(g, p, x, y);
             }
             return points;
-        }
-    }
-
-    public static class GeometricMath
-    {
-        public static int GetDistance(Point a, Point b)
-        {
-            return (int)Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2));
         }
     }
 }

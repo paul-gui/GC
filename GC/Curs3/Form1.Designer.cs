@@ -75,7 +75,7 @@
             this.Controls.Add(this.btnEx1);
             this.Controls.Add(this.pcbDisplay);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Curs 3";
             ((System.ComponentModel.ISupportInitialize)(this.pcbDisplay)).EndInit();
             this.ResumeLayout(false);
 

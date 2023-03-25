@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curs1", "Curs1\Curs1.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curs2", "Curs2\Curs2.csproj", "{809E8CF1-20BD-4890-9C6C-1B5BCD047495}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDrawMethods", "CustomDrawMethods\CustomDrawMethods.csproj", "{47685086-B621-40EE-9A49-E58457B338C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCGMethods", "CustomDrawMethods\CustomCGMethods.csproj", "{47685086-B621-40EE-9A49-E58457B338C1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallestEnclosingCircle", "SmallestEnclosingCircle\SmallestEnclosingCircle.csproj", "{D4A35622-F840-4822-B8BF-E03E8B362C12}"
 EndProject

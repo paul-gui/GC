@@ -1,4 +1,4 @@
-﻿using CustomDrawMethods;
+﻿using CustomCGMethods;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

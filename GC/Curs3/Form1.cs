@@ -4,10 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CustomDrawMethods;
+using CustomCGMethods;
 
 namespace Curs3
 {
@@ -184,19 +185,59 @@ namespace Curs3
             int n = rnd.Next(10, 15);
             Pen pointsPen = new Pen(Color.Black, 2);
             Pen linePen = new Pen(Color.Red, 1);
+            Pen interPointsPen = new Pen(Color.Green);
 
             Point[] points = CustomGraphics.DrawRandomPoints(g, pointsPen, 2 * n, 0, 0, pcbDisplay.Width, pcbDisplay.Height);
-            SortedList<int, Line> lines = new SortedList<int, Line>(new DuplicateKeyComparer<int>());
 
-            for (int i = 0; i < points.Length - 1; i += 2)
+            Segment[] segments = new Segment[n];
+
+            int k = 0;
+            for (int i = 0; i < 2 * n - 1; i += 2)
             {
+                segments[k] = new Segment(points[i], points[i + 1]);
                 g.DrawLine(linePen, points[i], points[i + 1]);
-                int x = points[i].X < points[i + 1].X ? points[i].X : points[i + 1].X;
-                lines.Add(x, new Line(points[i], points[i + 1]));
+                k++;
             }
 
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    float? x, y;
+                    if (get_line_intersection(segments[i].A.X, segments[i].A.Y, segments[i].B.X, segments[i].B.Y, segments[j].A.X, segments[j].A.Y, segments[j].B.X, segments[j].B.Y,out x, out y))
+                    {
+                        g.DrawEllipse(interPointsPen, (float)x - 5, (float)y - 5, 10, 10);
+                    }
+                }
+            }
 
             RefreshImage();
+        }
+
+        bool get_line_intersection(float p0_x, float p0_y, float p1_x, float p1_y,
+    float p2_x, float p2_y, float p3_x, float p3_y, out float? i_x, out float? i_y)
+        {
+            i_x = 0;
+            i_y = 0;
+            float s1_x, s1_y, s2_x, s2_y;
+            s1_x = p1_x - p0_x; s1_y = p1_y - p0_y;
+            s2_x = p3_x - p2_x; s2_y = p3_y - p2_y;
+
+            float s, t;
+            s = (-s1_y * (p0_x - p2_x) + s1_x * (p0_y - p2_y)) / (-s2_x * s1_y + s1_x * s2_y);
+            t = (s2_x * (p0_y - p2_y) - s2_y * (p0_x - p2_x)) / (-s2_x * s1_y + s1_x * s2_y);
+
+            if (s >= 0 && s <= 1 && t >= 0 && t <= 1)
+            {
+                // Collision detected
+                if (i_x != null)
+                    i_x = (p0_x + (t * s1_x));
+                if (i_y != null)
+                    i_y = (p0_y + (t * s1_y));
+                return true;
+            }
+
+            return false; // No collision
         }
 
         private void RefreshImage()
@@ -204,21 +245,14 @@ namespace Curs3
             pcbDisplay.Image = bmp;
         }
 
-        public struct Line
+        public struct Segment
         {
             public Point A, B;
-            public Line(Point a, Point b)
+
+            public Segment (Point a, Point b)
             {
-                if (a.X < b.X)
-                {
-                    A = a;
-                    B = b;
-                }
-                else
-                {
-                    A = b;
-                    B = a;
-                }
+                A = a;
+                B = b;
             }
         }
 
